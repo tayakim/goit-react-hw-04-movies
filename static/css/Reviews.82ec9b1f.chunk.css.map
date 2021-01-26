@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/reviews/reviews.module.css"],"names":[],"mappings":"AAAA,qBACI,sBAAuB,CACvB,cAAe,CACf,aAAc,CACd,eACJ","file":"Reviews.82ec9b1f.chunk.css","sourcesContent":[".text {\r\n    font-family: \"Segoe UI\";\r\n    font-size: 14px;\r\n    color: #535759;\r\n    font-weight: 700;\r\n}"]}
