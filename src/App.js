@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import { Route, Switch } from "react-router-dom";
+import HomePage from "./pages/homepage/HomePage";
+import Navigations from "./navigations/Navigations";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AsyncMovieDetails = lazy(() => import("./pages/MovieDetailPage"));
+const AsyncMovies = lazy(() => import("./pages/Movie"));
+
+const App = () => (
+  <div>
+    <Navigations />
+    <Suspense fallback={<h2> Loading...</h2>}>
+      {" "}
+      <Switch>
+        <Route path="/" exact component={HomePage} />{" "}
+        <Route path="/movie/:movieId" component={AsyncMovieDetails} />{" "}
+        <Route path="/movie" component={AsyncMovies} />{" "}
+        <Route component={HomePage} />{" "}
+      </Switch>{" "}
+    </Suspense>{" "}
+  </div>
+);
 
 export default App;

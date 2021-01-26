@@ -1,0 +1,36 @@
+.castList {
+    padding-left: 50px;
+    list-style: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.castText {
+    font-family: "Segoe UI";
+    font-size: 14px;
+    color: #535759;
+    font-weight: 700;
+}
+
+.active {
+    color: #59aedf;
+    font-weight: 700;
+    font-family: "Segoe UI";
+    font-size: 14px;
+}
+
+.castImg {
+    padding-top: 20px;
+}
+
+.button {
+    border-radius: 5%;
+    padding: 7px;
+    color: #535759;
+    background-color: #d8eaf1;
+    margin: 20px;
+    border: 0;
+}

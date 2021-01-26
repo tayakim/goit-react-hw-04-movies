@@ -1,0 +1,34 @@
+.wrap {
+    display: flex;
+    padding: 100px;
+    /* border-bottom: 0.5px solid #535759; */
+    margin-bottom: 20px;
+}
+
+.movieText {
+    font-family: "Segoe UI";
+    font-size: 14px;
+    color: #535759;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.movieTextBold {
+    font-family: "Segoe UI";
+    font-size: 16px;
+    color: #535759;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+.movieTextTitle {
+    font-family: "Segoe UI";
+    font-size: 25px;
+    color: #535759;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+.movieImg {
+    margin-right: 30px;
+}

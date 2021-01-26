@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.wrapper {
+    box-shadow: 2px 2px 10px #9bdaf2;
+    background-color: #d8eaf1;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+    max-width: auto;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    font-family: "Segoe UI";
+    font-size: 22px;
+    color: #535759;
+    font-weight: 700;
+}
+
+.active {
+    color: #59aedf;
+}
+
+
+/* .box {
+    height: 70px;
+    border-bottom: 1.5px solid #535759;
+    padding-left: 30px;
+    font-size: 25px;
+    line-height: 1.4;
+} */
+
+
+/* .linkSecondary:active {
+    color: #59aedf;
+} */

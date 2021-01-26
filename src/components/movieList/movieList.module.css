@@ -1,0 +1,13 @@
+.moviesListItem {
+    text-decoration: none;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    color: #535759;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.moviesLi {
+    padding-bottom: 10px;
+    padding-left: 60px;
+}
