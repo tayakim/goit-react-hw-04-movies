@@ -18,7 +18,7 @@ export default class MoviePage extends Component {
   };
 
   onQueryChange = (query) => {
-    this.props.history.push({
+    this.props.history.replace({
       pathname: this.props.location.pathname,
       search: `query=${query}`,
     });

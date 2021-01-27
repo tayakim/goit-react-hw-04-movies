@@ -5,34 +5,42 @@ import Movie from "../components/movie/Movie";
 import NavigationDetailsPage from "../navigations/NavigationDetailsPage";
 import styles from "../components/cast/cast.module.css";
 
-const AsyncCast = lazy(() => import("./Cast" /* webpackChunkName: "Cast" */));
+const AsyncCast = lazy(() => import("./Cast"));
 
-const AsyncReviews = lazy(() =>
-  import("./Review" /* webpackChunkName: "Reviews" */)
-);
+const AsyncReviews = lazy(() => import("./Review"));
 
 const getIdFromProps = (props) => props.match.params.movieId;
 
 class MovieDetailsPage extends Component {
   state = {
     film: null,
+    from: "",
+    search: "",
   };
 
   componentDidMount() {
     const id = getIdFromProps(this.props);
     API.getFilmWithId(id).then((film) => this.setState({ film }));
+    this.props.location.state.from &&
+      this.setState({
+        from: this.props.location.state.from.pathname,
+        search: this.props.location.state.from.search,
+      });
   }
 
   handleGoBack = () => {
-    this.props.history.push({
-      pathname: "/",
-    });
+    const { from, search } = this.state;
+    const { history } = this.props;
+    if (from && search) {
+      history.push(`${from}${search}`);
+    } else {
+      history.push("/");
+    }
   };
 
   render() {
     const { film } = this.state;
     if (film) {
-      console.log("film:", film);
     }
     return (
       <div>

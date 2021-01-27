@@ -4,7 +4,6 @@ import styles from "../cast/cast.module.css";
 const baseURLImage = "https://image.tmdb.org/t/p/w92";
 
 const CastComp = ({ cast }) => {
-  console.log("cast:", cast);
   return (
     <>
       <ul className={styles.castList}>
