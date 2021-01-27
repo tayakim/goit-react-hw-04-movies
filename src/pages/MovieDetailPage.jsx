@@ -24,11 +24,6 @@ class MovieDetailsPage extends Component {
   }
 
   handleGoBack = () => {
-    const { state } = this.props.location;
-    if (state) {
-      this.props.history.push(state.from);
-      return;
-    }
     this.props.history.push({
       pathname: "/",
     });

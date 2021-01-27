@@ -12,7 +12,7 @@ const App = () => (
     <Suspense fallback={<h2> Loading...</h2>}>
       {" "}
       <Switch>
-        <Route path="/" exact component={HomePage} />{" "}
+        <Route exact path="/" component={HomePage} />{" "}
         <Route path="/movie/:movieId" component={AsyncMovieDetails} />{" "}
         <Route path="/movie" component={AsyncMovies} />{" "}
         <Route component={HomePage} />{" "}
