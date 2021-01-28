@@ -1,5 +1,3 @@
-// const baseURL = "https://api.themoviedb.org/3/";
-// const APIKey = "eaa473bdd4b06e0d19833bf37c1d6100";
 // //api.themoviedb.org/3/movie/550?api_key=eaa473bdd4b06e0d19833bf37c1d6100
 
 import axios from "axios";

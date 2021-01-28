@@ -17,7 +17,7 @@ class MoviesList extends Component {
                   <Link
                     className={styles.moviesListItem}
                     to={{
-                      pathname: `/movie/:${film.id}`,
+                      pathname: `/movie/${film.id}`,
                       state: { from: this.props.location },
                     }}
                   >

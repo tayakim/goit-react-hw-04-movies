@@ -59,11 +59,11 @@ class MovieDetailsPage extends Component {
             <Route
               path={`${this.props.match.url}/cast`}
               exact
-              component={AsyncCast}
+              render={() => <AsyncCast id={getIdFromProps(this.props)} />}
             />
             <Route
               path={`${this.props.match.url}/reviews`}
-              component={AsyncReviews}
+              render={() => <AsyncReviews id={getIdFromProps(this.props)} />}
             />
           </Switch>
         </Suspense>
