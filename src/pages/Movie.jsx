@@ -60,7 +60,7 @@ export default class MoviePage extends Component {
     return (
       <>
         <Route
-          path={`${this.props.match.path}/query=${query}`}
+          path={`${this.props.match.url}/query=${query}`}
           component={MoviesList}
         />
         <SearchForm onSubmit={this.onSubmitForm} />

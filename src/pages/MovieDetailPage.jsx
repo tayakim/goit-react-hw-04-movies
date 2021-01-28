@@ -57,12 +57,12 @@ class MovieDetailsPage extends Component {
         <Suspense fallback={<h2 className={styles.castText}>Loading...</h2>}>
           <Switch>
             <Route
-              path={`${this.props.match.path}/cast`}
+              path={`${this.props.match.url}/cast`}
               exact
               component={AsyncCast}
             />
             <Route
-              path={`${this.props.match.path}/reviews`}
+              path={`${this.props.match.url}/reviews`}
               component={AsyncReviews}
             />
           </Switch>
